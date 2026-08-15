@@ -7,107 +7,324 @@
 
   <title>MaryLou McAskill | Technical Program & Technology Leader</title>
 
-  <link rel="stylesheet" href="./style.css" />
-  <script src="./script.js" defer></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f7f7f7;
+      color: #222;
+      line-height: 1.65;
+    }
+
+    /* HEADER */
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #dddddd;
+      padding: 35px 20px 25px;
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .header-container h1 {
+      margin: 0 0 8px;
+      font-size: 36px;
+    }
+
+    .headline {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .contact-line {
+      margin: 4px 0;
+      font-size: 15px;
+    }
+
+    .contact-line a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background-color: #222;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+    }
+
+    .nav-container a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 14px;
+      font-weight: 600;
+    }
+
+    .nav-container a:hover {
+      background-color: #444;
+      border-radius: 4px;
+    }
+
+    /* GENERAL PAGE LAYOUT */
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    section {
+      background-color: #ffffff;
+      margin-bottom: 35px;
+      padding: 35px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 28px;
+      border-bottom: 2px solid #dddddd;
+      padding-bottom: 10px;
+    }
+
+    section h3 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    /* PROFESSIONAL SUMMARY */
+
+    .summary p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CORE COMPETENCIES */
+
+    .competency-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px 50px;
+    }
+
+    .competency-group h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .competency-group ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .competency-group li {
+      margin-bottom: 7px;
+    }
+
+    /* CAREER ACHIEVEMENTS */
+
+    .achievement {
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .achievement:first-of-type {
+      padding-top: 0;
+    }
+
+    .achievement:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .achievement h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .achievement ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .achievement li {
+      margin-bottom: 8px;
+    }
+
+    /* CERTIFICATIONS */
+
+    .certification-list {
+      columns: 2;
+      column-gap: 50px;
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .certification-list li {
+      margin-bottom: 10px;
+      break-inside: avoid;
+    }
+
+    /* BACK TO TOP */
+
+    .back-to-top {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .back-to-top a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 800px) {
+      .competency-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .certification-list {
+        columns: 1;
+      }
+
+      .header-container h1 {
+        font-size: 30px;
+      }
+
+      section {
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      main {
+        padding: 25px 12px 40px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 
-<body>
+
+<body id="top">
 
   <!-- ======================================================
-       NAVIGATION / RESUME HEADER
+       HEADER
+       ====================================================== -->
+
+  <header>
+
+    <div class="header-container">
+
+      <h1>MaryLou McAskill</h1>
+
+      <div class="headline">
+        Technical Program Manager | Product & Portfolio Leader | Technology Delivery
+      </div>
+
+      <div class="contact-line">
+        London, Ontario, Canada
+      </div>
+
+      <div class="contact-line">
+        Email:
+        <a href="mailto:marylouadams@live.com">
+          marylouadams@live.com
+        </a>
+      </div>
+
+      <div class="contact-line">
+        LinkedIn:
+        <a
+          href="https://www.linkedin.com/in/MaryLouMcAskill"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkedin.com/in/MaryLouMcAskill
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ======================================================
+       NAVIGATION
        ====================================================== -->
 
   <nav>
-    <div id="home">
 
-      <div class="profile_name">
-        MaryLou McAskill
+    <div class="nav-container">
 
-        <div class="professional_title">
-          Technical Program Manager | Product & Portfolio Leader | Technology Delivery
-        </div>
+      <a href="#summary">Professional Summary</a>
 
-        <div class="contact_info">
-          <img
-            src="html_finalprojimages/envelope.png"
-            alt="Email"
-          />
-          <a href="mailto:marylouadams@live.com">
-            marylouadams@live.com
-          </a>
-        </div>
+      <a href="#competencies">Core Competencies</a>
 
-        <div class="contact_info">
-          London, Ontario, Canada
-        </div>
+      <a href="#achievements">Career Achievements</a>
 
-        <div class="contact_info">
-          <a
-            href="https://www.linkedin.com/in/MaryLouMcAskill"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            linkedin.com/in/MaryLouMcAskill
-          </a>
-        </div>
-      </div>
-
-
-      <!-- Navigation Menu -->
-
-      <div class="topdiv">
-
-        <a class="topmenu" href="#about-me">
-          Professional Summary
-        </a>
-
-        <a class="topmenu" href="#skills">
-          Core Competencies
-        </a>
-
-        <a class="topmenu" href="#achievements">
-          Career Achievements
-        </a>
-
-      </div>
+      <a href="#certifications">Certifications</a>
 
     </div>
+
   </nav>
 
 
-  <!-- ======================================================
-       PROFESSIONAL SUMMARY
-       ====================================================== -->
-
-  <section id="about-me" class="container">
-
-    <div>
-
-      <!--
-      Replace this image with your professional headshot if desired.
-      -->
-      <img
-        src="html_finalprojimages/power puff girl.jpeg"
-        class="profile_image"
-        alt="MaryLou McAskill"
-      />
-
-    </div>
+  <main>
 
 
-    <div>
+    <!-- ======================================================
+         PROFESSIONAL SUMMARY
+         ====================================================== -->
 
-      <h1>
-        MaryLou McAskill
-      </h1>
+    <section id="summary" class="summary">
 
-      <h3>
-        Technical Program Manager | Product & Portfolio Leader | Technology Delivery
-      </h3>
-
-      <h2>
-        Professional Summary
-      </h2>
+      <h2>Professional Summary</h2>
 
       <p>
         Senior Technical Program, Product, Portfolio, Project, and Delivery
@@ -119,7 +336,7 @@
       </p>
 
       <p>
-        Experience spans enterprise software, SaaS, cloud services, FinTech,
+        Experience across enterprise software, SaaS, cloud services, FinTech,
         banking, payments, financial services, insurance, automotive,
         healthcare, ERP and business systems, professional services, managed
         services, AI/ML, automation, data and analytics, robotics,
@@ -149,258 +366,187 @@
         satisfaction, and organizational performance.
       </p>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- ======================================================
-       CORE COMPETENCIES
-       ====================================================== -->
+    <!-- ======================================================
+         CORE COMPETENCIES
+         ====================================================== -->
 
-  <section id="skills">
+    <section id="competencies">
 
-    <h2>Core Competencies</h2>
+      <h2>Core Competencies</h2>
 
-    <div style="clear: both;"></div>
-
-
-    <div class="all_skills">
+      <div class="competency-grid">
 
 
-      <!-- Technical Program Management -->
+        <div class="competency-group">
 
-      <div class="skill">
-        <img
-          src="html_finalprojimages/pgmt.png"
-          alt="Technical Program Management"
-        />
+          <h3>Technical Program & Portfolio Management</h3>
 
-        <h6>Technical Program Management</h6>
+          <ul>
+            <li>Technical Program Management</li>
+            <li>Program & Portfolio Management</li>
+            <li>Enterprise Project Management</li>
+            <li>Delivery Management</li>
+            <li>PMO Development & Governance</li>
+            <li>Portfolio Prioritization</li>
+            <li>Demand & Intake Management</li>
+            <li>Dependency Management</li>
+            <li>Critical Path Management</li>
+            <li>Resource & Capacity Planning</li>
+            <li>Risk & Issue Management</li>
+            <li>Change Management</li>
+            <li>Decision Management</li>
+            <li>Executive Reporting</li>
+            <li>KPI / OKR Management</li>
+          </ul>
 
-        <p>
-          Program delivery, enterprise project management, governance,
-          dependencies, critical paths, risk management, decision management,
-          and executive reporting.
-        </p>
-      </div>
-
-
-      <!-- Portfolio Management -->
-
-      <div class="skill">
-        <img
-          src="html_finalprojimages/pm.png"
-          alt="Portfolio Management"
-        />
-
-        <h6>Program & Portfolio Management</h6>
-
-        <p>
-          Portfolio prioritization, demand and intake management, resource
-          planning, capacity management, financial oversight, KPI/OKR
-          management, and strategic planning.
-        </p>
-      </div>
+        </div>
 
 
-      <!-- Product Management -->
+        <div class="competency-group">
 
-      <div class="skill">
-        <img
-          src="html_finalprojimages/product.png"
-          alt="Product Management"
-        />
+          <h3>Product Management</h3>
 
-        <h6>Product Management</h6>
+          <ul>
+            <li>Product Strategy</li>
+            <li>Product Vision</li>
+            <li>Product Roadmaps</li>
+            <li>Product Lifecycle Management</li>
+            <li>Requirements Definition</li>
+            <li>Backlog Prioritization</li>
+            <li>Customer Discovery</li>
+            <li>Product Delivery</li>
+            <li>Release Management</li>
+            <li>Customer Feedback</li>
+            <li>Continuous Product Improvement</li>
+            <li>Data-Driven Product Decisions</li>
+          </ul>
 
-        <p>
-          Product strategy, product roadmaps, lifecycle management,
-          prioritization, requirements, customer discovery, Agile delivery,
-          and continuous improvement.
-        </p>
-      </div>
-
-
-      <!-- Software Development -->
-
-      <div class="skill">
-        <img
-          src="html_finalprojimages/SD.png"
-          alt="Software Development"
-        />
-
-        <h6>Software & Technology Delivery</h6>
-
-        <p>
-          Enterprise software, SaaS, APIs, integrations, SDLC, CI/CD,
-          DevOps, system integration, testing, UAT, production readiness,
-          and release management.
-        </p>
-      </div>
+        </div>
 
 
-      <!-- Cloud -->
+        <div class="competency-group">
 
-      <div class="skill">
+          <h3>AI, Automation & Process Improvement</h3>
 
-        <h6>Cloud & Infrastructure</h6>
+          <ul>
+            <li>Enterprise AI Adoption</li>
+            <li>Artificial Intelligence / Machine Learning</li>
+            <li>Generative AI</li>
+            <li>Large Language Models</li>
+            <li>AI-Assisted Software Development</li>
+            <li>AI Workflow Automation</li>
+            <li>AI-Enabled Process Improvement</li>
+            <li>Workflow Automation</li>
+            <li>Business Process Improvement</li>
+            <li>Process Standardization</li>
+            <li>Continuous Improvement</li>
+            <li>Operational Excellence</li>
+            <li>Digital Transformation</li>
+          </ul>
 
-        <p>
-          AWS, Microsoft Azure, GCP, VMware, infrastructure, networking,
-          security, backup, disaster recovery, monitoring, and cloud
-          transformation.
-        </p>
-
-      </div>
-
-
-      <!-- AI -->
-
-      <div class="skill">
-
-        <h6>AI, ML & Automation</h6>
-
-        <p>
-          Artificial Intelligence, AI/ML program delivery, generative AI,
-          large language models, ChatGPT, Claude, AI-assisted development,
-          AI workflow automation, and enterprise AI adoption.
-        </p>
-
-      </div>
+        </div>
 
 
-      <!-- Process Improvement -->
+        <div class="competency-group">
 
-      <div class="skill">
+          <h3>Technology Delivery</h3>
 
-        <h6>Automation & Process Improvement</h6>
+          <ul>
+            <li>Enterprise Software</li>
+            <li>SaaS Platforms</li>
+            <li>Cloud Computing</li>
+            <li>Infrastructure</li>
+            <li>ERP & Business Systems</li>
+            <li>REST APIs</li>
+            <li>Enterprise Integrations</li>
+            <li>Data & Analytics</li>
+            <li>CI/CD</li>
+            <li>DevOps</li>
+            <li>SDLC</li>
+            <li>Agile / Scrum / Kanban</li>
+            <li>System Integration</li>
+            <li>UAT & Testing</li>
+            <li>Production Readiness</li>
+          </ul>
 
-        <p>
-          Workflow automation, business process improvement, process
-          standardization, operational excellence, digital transformation,
-          continuous improvement, and data-driven decision-making.
-        </p>
-
-      </div>
-
-
-      <!-- ERP -->
-
-      <div class="skill">
-
-        <h6>ERP & Enterprise Platforms</h6>
-
-        <p>
-          ServiceNow, ServiceNow SPM, Microsoft Dynamics, Salesforce,
-          Workday, SharePoint, Power Platform, QuickBooks, HubSpot,
-          BambooHR, and enterprise workflow platforms.
-        </p>
-
-      </div>
+        </div>
 
 
-      <!-- Data -->
+        <div class="competency-group">
 
-      <div class="skill">
+          <h3>Cloud, Data & Platforms</h3>
 
-        <h6>Data & Analytics</h6>
+          <ul>
+            <li>AWS</li>
+            <li>Microsoft Azure</li>
+            <li>Google Cloud Platform</li>
+            <li>VMware</li>
+            <li>ServiceNow / ServiceNow SPM</li>
+            <li>Microsoft Dynamics</li>
+            <li>Salesforce</li>
+            <li>Workday</li>
+            <li>SharePoint</li>
+            <li>Power BI</li>
+            <li>SQL</li>
+            <li>ETL</li>
+            <li>Elasticsearch</li>
+            <li>MongoDB</li>
+            <li>Oracle / DB2 / MySQL</li>
+          </ul>
 
-        <p>
-          SQL, Power BI, ETL, Elasticsearch, MySQL, Oracle, DB2,
-          MongoDB, Cassandra, dashboards, analytics, reporting,
-          and forecasting.
-        </p>
+        </div>
+
+
+        <div class="competency-group">
+
+          <h3>Business & Customer Leadership</h3>
+
+          <ul>
+            <li>Customer-Focused Delivery</li>
+            <li>Customer Success</li>
+            <li>Client Relationship Management</li>
+            <li>Professional Services</li>
+            <li>Managed Services</li>
+            <li>Executive Stakeholder Management</li>
+            <li>Cross-Functional Leadership</li>
+            <li>Vendor Management</li>
+            <li>Financial Management</li>
+            <li>Budgeting & Forecasting</li>
+            <li>P&amp;L Awareness</li>
+            <li>Strategic Planning</li>
+            <li>Operational Management</li>
+          </ul>
+
+        </div>
+
 
       </div>
 
-
-      <!-- Customer -->
-
-      <div class="skill">
-
-        <h6>Customer & Client Leadership</h6>
-
-        <p>
-          Customer-focused delivery, customer success, professional
-          services, managed services, executive stakeholder management,
-          vendor management, client relationships, and escalation management.
-        </p>
-
-      </div>
+    </section>
 
 
-      <!-- Financial Management -->
+    <!-- ======================================================
+         CAREER ACHIEVEMENTS
+         ====================================================== -->
 
-      <div class="skill">
+    <section id="achievements">
 
-        <h6>Financial & Operational Management</h6>
-
-        <p>
-          Multimillion-dollar budgets, forecasting, utilization,
-          capacity planning, financial reporting, vendor management,
-          P&amp;L awareness, resource planning, and business cases.
-        </p>
-
-      </div>
+      <h2>Career Achievements</h2>
 
 
-      <!-- Leadership -->
+      <div class="achievement">
 
-      <div class="skill">
-
-        <h6>Cross-Functional Leadership</h6>
-
-        <p>
-          Leadership across Product, Engineering, Architecture, Data,
-          QA, DevOps, Infrastructure, Security, Finance, Operations,
-          Manufacturing, customers, vendors, and executives.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ======================================================
-       CAREER ACHIEVEMENTS
-       ====================================================== -->
-
-  <section
-    class="projects"
-    id="achievements"
-  >
-
-    <h2>
-      Career Achievements
-    </h2>
-
-    <div style="clear: both;"></div>
-
-
-    <div
-      id="projects-container"
-      class="projects-container"
-    >
-
-
-      <!-- Achievement 1 -->
-
-      <div class="project-card">
-
-        <h3>
-          Improved Delivery Performance
-        </h3>
+        <h3>Delivery & Program Performance</h3>
 
         <ul>
-
           <li>
             Improved on-time project and program delivery by up to
             <strong>35%</strong> through PMO transformation, governance
-            modernization, delivery optimization, and standardized
-            execution practices.
+            modernization, delivery optimization, and standardized execution
+            practices.
           </li>
 
           <li>
@@ -409,25 +555,16 @@
             strategic roadmaps, decision management, and cross-functional
             governance.
           </li>
-
         </ul>
 
       </div>
 
 
-      <hr>
+      <div class="achievement">
 
-
-      <!-- Achievement 2 -->
-
-      <div class="project-card">
-
-        <h3>
-          $3M+ Enterprise Modernization
-        </h3>
+        <h3>Enterprise Modernization</h3>
 
         <ul>
-
           <li>
             Led a <strong>$3M+ multi-year enterprise modernization
             program</strong> transforming a 25-year-old automotive
@@ -436,59 +573,39 @@
 
           <li>
             Reduced platform maintenance and operational overhead by
-            approximately <strong>30%</strong> through modernization
-            and process improvement.
+            approximately <strong>30%</strong>.
           </li>
-
         </ul>
 
       </div>
 
 
-      <hr>
+      <div class="achievement">
 
-
-      <!-- Achievement 3 -->
-
-      <div class="project-card">
-
-        <h3>
-          Resource & Portfolio Optimization
-        </h3>
+        <h3>Resource & Portfolio Optimization</h3>
 
         <ul>
-
           <li>
             Increased resource utilization and forecasting accuracy by
             <strong>20%+</strong> through capacity planning, utilization
-            management, portfolio reporting, and data-driven
-            decision-making.
+            management, portfolio reporting, and data-driven decision-making.
           </li>
 
           <li>
             Established and transformed PMO, portfolio management,
-            governance, intake, prioritization, resource management,
-            and reporting frameworks.
+            governance, intake, prioritization, resource management, and
+            reporting frameworks.
           </li>
-
         </ul>
 
       </div>
 
 
-      <hr>
+      <div class="achievement">
 
-
-      <!-- Achievement 4 -->
-
-      <div class="project-card">
-
-        <h3>
-          Risk & Executive Decision Management
-        </h3>
+        <h3>Risk & Executive Decision Management</h3>
 
         <ul>
-
           <li>
             Reduced project escalation and issue-resolution timelines by
             approximately <strong>40%</strong> through structured risk,
@@ -496,219 +613,145 @@
           </li>
 
           <li>
-            Developed executive dashboards, governance processes,
-            decision registers, risk frameworks, and portfolio reporting
-            to improve organizational transparency and decision-making.
+            Developed dashboards, decision registers, reporting frameworks,
+            and governance processes that improved leadership visibility and
+            decision-making.
           </li>
-
         </ul>
 
       </div>
 
 
-      <hr>
+      <div class="achievement">
 
-
-      <!-- Achievement 5 -->
-
-      <div class="project-card">
-
-        <h3>
-          Enterprise Technology Leadership
-        </h3>
+        <h3>Enterprise Technology Leadership</h3>
 
         <ul>
-
           <li>
-            Led multimillion-dollar programs spanning cloud,
-            enterprise software, FinTech, financial services,
-            healthcare, automotive, AI/ML, robotics, manufacturing,
-            automation, and SaaS.
+            Led multimillion-dollar programs spanning cloud, enterprise
+            software, FinTech, financial services, healthcare, automotive,
+            AI/ML, robotics, manufacturing, automation, and SaaS.
           </li>
 
           <li>
-            Managed complex portfolios involving Software Engineering,
-            Product, Architecture, Data, DevOps, QA, Infrastructure,
+            Led complex cross-functional portfolios across Product,
+            Engineering, Architecture, Data, QA, DevOps, Infrastructure,
             Security, Finance, Operations, customers, and vendors.
           </li>
-
         </ul>
 
       </div>
 
 
-      <hr>
+      <div class="achievement">
 
-
-      <!-- Achievement 6 -->
-
-      <div class="project-card">
-
-        <h3>
-          Security, Compliance & Governance
-        </h3>
+        <h3>Security, Risk & Compliance</h3>
 
         <ul>
-
           <li>
-            Led programs supporting PCI DSS, SOC 2 readiness,
-            security governance, operational controls, regulatory
-            compliance, and risk management.
+            Led programs supporting PCI DSS, SOC 2 readiness, security
+            governance, operational controls, regulatory compliance, and
+            risk management.
           </li>
-
         </ul>
 
       </div>
 
 
-      <hr>
+      <div class="achievement">
 
-
-      <!-- Achievement 7 -->
-
-      <div class="project-card">
-
-        <h3>
-          Team Leadership
-        </h3>
+        <h3>AI, Automation & Operational Improvement</h3>
 
         <ul>
-
           <li>
-            Built and mentored high-performing cross-functional teams
-            across Product, Engineering, Project Management, QA,
-            Infrastructure, Operations, and customer-facing functions.
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <hr>
-
-
-      <!-- Achievement 8 -->
-
-      <div class="project-card">
-
-        <h3>
-          AI, Automation & Workflow Improvement
-        </h3>
-
-        <ul>
-
-          <li>
-            Led automation and workflow improvement initiatives that
-            reduced manual processes, improved data quality,
-            accelerated project initiation, and strengthened
-            operational visibility.
+            Led automation and workflow improvement initiatives that reduced
+            manual processes, improved data quality, accelerated project
+            initiation, and strengthened operational visibility.
           </li>
 
           <li>
-            Applied AI, automation, analytics, and process improvement
-            techniques to accelerate analysis, documentation,
+            Applied AI and automation to analysis, documentation,
             requirements development, risk identification, workflow
             optimization, and decision support.
           </li>
-
         </ul>
 
       </div>
 
-    </div>
 
-  </section>
+      <div class="achievement">
 
-
-  <div style="clear: both;"></div>
-
-
-  <!-- ======================================================
-       CERTIFICATIONS
-       ====================================================== -->
-
-  <section id="certifications">
-
-    <h2>
-      Professional Certifications
-    </h2>
-
-    <div class="projects-container">
-
-      <div class="project-card">
+        <h3>People Leadership</h3>
 
         <ul>
-
           <li>
-            <strong>PgMP</strong> – Program Management Professional
+            Built and mentored high-performing cross-functional teams across
+            Product, Engineering, Project Management, QA, Infrastructure,
+            Operations, and customer-facing functions.
           </li>
-
-          <li>
-            <strong>PMP</strong> – Project Management Professional
-          </li>
-
-          <li>
-            <strong>PMI-ACP</strong> – Agile Certified Practitioner
-          </li>
-
-          <li>
-            <strong>CSM</strong> – Certified ScrumMaster
-          </li>
-
-          <li>
-            <strong>PSPO</strong> – Professional Scrum Product Owner
-          </li>
-
-          <li>
-            <strong>ITIL Foundation</strong>
-          </li>
-
-          <li>
-            <strong>CRM</strong> – Customer Relationship Management
-          </li>
-
         </ul>
 
       </div>
 
+    </section>
+
+
+    <!-- ======================================================
+         CERTIFICATIONS
+         ====================================================== -->
+
+    <section id="certifications">
+
+      <h2>Professional Certifications</h2>
+
+      <ul class="certification-list">
+
+        <li>
+          <strong>PgMP</strong> – Program Management Professional
+        </li>
+
+        <li>
+          <strong>PMP</strong> – Project Management Professional
+        </li>
+
+        <li>
+          <strong>PMI-ACP</strong> – Agile Certified Practitioner
+        </li>
+
+        <li>
+          <strong>CSM</strong> – Certified ScrumMaster
+        </li>
+
+        <li>
+          <strong>PSPO</strong> – Professional Scrum Product Owner
+        </li>
+
+        <li>
+          <strong>ITIL Foundation</strong>
+        </li>
+
+        <li>
+          <strong>CRM</strong> – Customer Relationship Management
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- ======================================================
+         BACK TO TOP
+         ====================================================== -->
+
+    <div class="back-to-top">
+
+      <a href="#top">
+        ↑ Back to Top
+      </a>
+
     </div>
 
-  </section>
-
-
-  <!-- ======================================================
-       BACK TO TOP BUTTON
-       ====================================================== -->
-
-  <div class="iconbutton">
-
-    <a
-      href="#home"
-      aria-label="Back to top"
-    >
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="white"
-        width="63px"
-      >
-
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-
-      </svg>
-
-    </a>
-
-  </div>
-
+  </main>
 
 </body>
 
